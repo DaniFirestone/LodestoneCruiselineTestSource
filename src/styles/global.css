@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Design tokens ported verbatim from the standalone catalog's :root.
+   Declaring them as @theme makes them Tailwind utilities, e.g. bg-bg,
+   bg-surface, text-text-sub, border-border, font-mono. */
+@theme {
+  --color-bg: #f4f4f1;
+  --color-surface: #ffffff;
+  --color-surface2: #f0f0ed;
+  --color-border: #e2e1dc;
+  --color-border-strong: #c5c4bc;
+  --color-text: #18181a;
+  --color-text-sub: #68686a;
+  --color-text-muted: #9c9b98;
+
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, monospace;
+}
+
+/* Base resets + shell, ported from the standalone <style> block. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+button {
+  font-family: var(--font-sans);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-strong);
+}
