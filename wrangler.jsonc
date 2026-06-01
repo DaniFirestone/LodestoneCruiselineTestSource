@@ -2,7 +2,7 @@
   // Cloudflare Workers config for deploying the Shorex Catalog as a static site.
   // The Astro build outputs static files to ./dist, which Workers serves directly
   // as static assets — no server-side Worker code needed.
-  "name": "lodestone-shorex-catalog",
+  "name": "lodestone-cruiselines-testsource",
   "compatibility_date": "2026-06-01",
   "assets": {
     "directory": "./dist"
